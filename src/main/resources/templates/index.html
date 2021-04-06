@@ -6,10 +6,15 @@
     <head>
         <title>Inicio</title>
         <meta charset="UTF-8"/>
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"></link>
+        <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"></link>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
     </head>
     <body>
         
-        <header th:replace="Layout/plantilla::header"/>
+        <header th:replace="Layout/plantilla::header"></header>
        
         <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/agregar}">[[#{persona.crear}]]</a>
         
